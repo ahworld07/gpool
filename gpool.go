@@ -13,7 +13,7 @@ func New(size int) *Pool {
 	if size <= 0 {
 		size = 1
 	}
-	return &pool{
+	return &Pool{
 		Queue: make(chan int, size),
 		Wg:    &sync.WaitGroup{},
 	}
